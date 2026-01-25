@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiru Moorthi- Portfolio</title>
+    <meta name="description" content="Professional portfolio showcasing web development projects and skills">
+    <meta name="description" content="Professional portfolio showcasing web development projects and skills">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100"
+        id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home"
+                    class="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    Thiru.dev
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
+                    <a href="#projects"
+                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Projects</a>
+                    <a href="#skills"
+                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Skills</a>
+                    <a href="#education"
+                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Education</a>
+                    <a href="#contact"
+                        class="px-5 py-2.5 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Let's
+                        Talk</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-indigo-600 focus:outline-none" id="nav-toggle">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 font-medium">Projects</a>
+                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 font-medium">Skills</a>
+                    <a href="#education" class="text-gray-600 hover:text-indigo-600 font-medium">Education</a>
+                    <a href="#contact" class="text-indigo-600 font-medium">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50"
+        id="home">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+                <div class="lg:w-1/2 space-y-8 animate-fade-in-up text-center lg:text-left">
+                    <div class="space-y-4">
+                        <span
+                            class="inline-block py-1 px-3 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm tracking-wide">👋
+                            Welcome to my portfolio</span>
+                        <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                            Hi, I'm <br>
+                            <span
+                                class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Thirumoorthi
+                                S</span>
+                        </h1>
+                        <p class="text-xl lg:text-2xl text-gray-600 font-medium">MERN Full Stack Developer</p>
+                    </div>
+
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                        I build exceptional digital experiences that are fast, accessible, and visually appealing.
+                        Passionate about transforming ideas into robust solutions using modern technologies.
+                    </p>
+
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#projects"
+                            class="px-8 py-3.5 bg-indigo-600 text-white rounded-full font-bold hover:bg-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center gap-2">
+                            View Work <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact"
+                            class="px-8 py-3.5 bg-white text-gray-800 border border-gray-200 rounded-full font-bold hover:border-indigo-600 hover:text-indigo-600 transition-all shadow-sm hover:shadow-md flex items-center gap-2">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center lg:justify-start gap-6 pt-6">
+                        <a href="https://github.com/Thiru1429" target="_blank"
+                            class="text-gray-400 hover:text-gray-900 transition-colors text-2xl"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/thirumoorthi14/" target="_blank"
+                            class="text-gray-400 hover:text-blue-600 transition-colors text-2xl"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/_itzz_thiru_/" target="_blank"
+                            class="text-gray-400 hover:text-pink-600 transition-colors text-2xl"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 flex justify-center lg:justify-end">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse">
+                        </div>
+                        <div
+                            class="relative w-full h-full rounded-full p-2 bg-white shadow-2xl overflow-hidden border-4 border-indigo-50">
+                            <img src="assets/thiru image.jpg" alt="Profile"
+                                class="w-full h-full object-cover rounded-full hover:scale-110 transition-transform duration-700">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white" id="about">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-indigo-100 rounded-full opacity-50 blur-xl"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-100 rounded-full opacity-50 blur-xl">
+                    </div>
+                    <img src="assets/thiru image.jpg" alt="About Me"
+                        class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
+                </div>
+
+                <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                        Passionate about creating <br>
+                        <span class="text-indigo-600">Digital Solutions</span>
+                    </h2>
+
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        I'm a passionate MERN Full Stack Developer with 6 months of experience creating digital
+                        experiences
+                        that make people's lives easier. I specialize in React, Node.js, and modern web technologies.
+                    </p>
+
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                        projects, or sharing my knowledge through technical writing.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-6 pt-6">
+                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors">
+                            <span class="block text-3xl font-bold text-indigo-600 mb-1">6+</span>
+                            <span class="text-sm text-gray-600 font-medium">Months Exp</span>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-purple-50 transition-colors">
+                            <span class="block text-3xl font-bold text-purple-600 mb-1">10+</span>
+                            <span class="text-sm text-gray-600 font-medium">Projects</span>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-pink-50 transition-colors">
+                            <span class="block text-3xl font-bold text-pink-600 mb-1">24/7</span>
+                            <span class="text-sm text-gray-600 font-medium">Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 bg-gray-50" id="projects">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+                <p class="text-gray-600 text-lg">Some of my recent work</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Parcel Project -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                        <img src="set-of-delivery-logistics-delivery-process-to-customers-illustration-vector.jpg"
+                            alt="Parcel Project"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end">
+                            <div class="flex gap-3">
+                                <a href="https://github.com/Thiru1429/parcel_project.git" target="_blank"
+                                    class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-indigo-600 transition-all">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
+                                <a href="https://github.com/Thiru1429/parcel_project.git" target="_blank"
+                                    class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-indigo-600 transition-all">
+                                    <i class="fas fa-external-link-alt text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 text-center md:text-left">
+                        <span class="text-xs font-bold tracking-wider text-indigo-600 uppercase mb-2 block">Business
+                            Automation</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                            Returno [ Courier Related Project ]</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            A comprehensive business process management system that streamlines workflow automation,
+                            task management, and process optimization for enterprises.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center md:justify-start gap-2 text-sm font-medium">
+                            <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-600">React.js</span>
+                            <span class="px-3 py-1 rounded-full bg-green-50 text-green-600">Node.js</span>
+                            <span class="px-3 py-1 rounded-full bg-gray-100 text-gray-600">Express.js</span>
+                            <span class="px-3 py-1 rounded-full bg-green-50 text-green-700">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Management Project -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+                    <div class="relative overflow-hidden h-64">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                        <img src="0b23b118184a96a7ed3a1c2e1a7ec5eb.jpg" alt="Event Management"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute bottom-4 left-4 right-4 z-20 flex justify-between items-end">
+                            <div class="flex gap-3">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-indigo-600 transition-all">
+                                    <i class="fab fa-github text-lg"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white hover:text-indigo-600 transition-all">
+                                    <i class="fas fa-external-link-alt text-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 text-center md:text-left">
+                        <span class="text-xs font-bold tracking-wider text-purple-600 uppercase mb-2 block">Event
+                            Platform</span>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                            Event Management System</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            A complete event planning and management platform with ticket booking, venue management,
+                            attendee tracking, and real-time analytics.
+                        </p>
+
+                        <div class="flex flex-wrap justify-center md:justify-start gap-2 text-sm font-medium">
+                            <span class="px-3 py-1 rounded-full bg-orange-50 text-orange-600">HTML 5</span>
+                            <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-600">Bootstrap 5</span>
+                            <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-600">CSS 3</span>
+                            <span class="px-3 py-1 rounded-full bg-yellow-50 text-yellow-600">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+    <section class="py-20 bg-gray-50" id="skills">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Skills & Technologies</h2>
+                <p class="text-gray-600 text-lg">My technical expertise</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <!-- Frontend Category -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                        <span class="w-2 h-8 bg-indigo-600 rounded-full mr-3"></span>
+                        Frontend Development
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- HTML 5 -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-orange-500 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-lg group-hover:bg-orange-100 transition-colors">
+                                    <i class="fab fa-html5 text-3xl text-orange-600"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-orange-600 transition-colors">HTML
+                                    5</span>
+                            </div>
+                        </div>
+
+                        <!-- CSS 3 -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-500 group">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                                    <i class="fab fa-css3-alt text-3xl text-blue-600"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-blue-600 transition-colors">CSS
+                                    3</span>
+                            </div>
+                        </div>
+
+                        <!-- Bootstrap -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-purple-500 group">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-purple-50 rounded-lg group-hover:bg-purple-100 transition-colors">
+                                    <i class="fab fa-bootstrap text-3xl text-purple-600"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-purple-600 transition-colors">Bootstrap</span>
+                            </div>
+                        </div>
+
+                        <!-- Tailwind CSS -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-cyan-500 group">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-cyan-50 rounded-lg group-hover:bg-cyan-100 transition-colors">
+                                    <i class="fas fa-wind text-3xl text-cyan-500"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-cyan-600 transition-colors">Tailwind
+                                    CSS</span>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-yellow-500 group">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-yellow-50 rounded-lg group-hover:bg-yellow-100 transition-colors">
+                                    <i class="fab fa-js text-3xl text-yellow-500"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-yellow-600 transition-colors">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <!-- DOM -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-gray-500 group">
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-gray-50 rounded-lg group-hover:bg-gray-100 transition-colors">
+                                    <i class="fas fa-sitemap text-3xl text-gray-600"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-gray-600 transition-colors">DOM</span>
+                            </div>
+                        </div>
+
+                        <!-- React.js -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-400 group relative overflow-hidden">
+                            <div class="absolute top-0 right-0">
+                                <span
+                                    class="px-2 py-1 text-[10px] font-bold text-white bg-blue-600 rounded-bl-lg">NEW</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-lg group-hover:bg-blue-100 transition-colors">
+                                    <i class="fab fa-react text-3xl text-blue-400 animate-spin-slow"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-blue-500 transition-colors">React.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Category -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 flex items-center">
+                        <span class="w-2 h-8 bg-indigo-600 rounded-full mr-3"></span>
+                        Backend Development
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <!-- Node.js -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green-500 group relative overflow-hidden">
+                            <div class="absolute top-0 right-0">
+                                <span
+                                    class="px-2 py-1 text-[10px] font-bold text-white bg-green-600 rounded-bl-lg">MERN</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-green-50 rounded-lg group-hover:bg-green-100 transition-colors">
+                                    <i class="fab fa-node-js text-3xl text-green-600"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-green-600 transition-colors">Node.js</span>
+                            </div>
+                        </div>
+
+                        <!-- Express.js -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-gray-800 group relative overflow-hidden">
+                            <div class="absolute top-0 right-0">
+                                <span
+                                    class="px-2 py-1 text-[10px] font-bold text-white bg-gray-600 rounded-bl-lg">MERN</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-gray-50 rounded-lg group-hover:bg-gray-200 transition-colors">
+                                    <i class="fas fa-server text-3xl text-gray-700"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-gray-900 transition-colors">Express.js</span>
+                            </div>
+                        </div>
+
+                        <!-- MongoDB -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-green-600 group relative overflow-hidden">
+                            <div class="absolute top-0 right-0">
+                                <span
+                                    class="px-2 py-1 text-[10px] font-bold text-white bg-green-700 rounded-bl-lg">MERN</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row items-center gap-4">
+                                <div
+                                    class="w-12 h-12 flex items-center justify-center bg-green-50 rounded-lg group-hover:bg-green-100 transition-colors">
+                                    <i class="fas fa-leaf text-3xl text-green-700"></i>
+                                </div>
+                                <span
+                                    class="font-semibold text-gray-700 group-hover:text-green-700 transition-colors">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-white" id="education">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Education</h2>
+                <p class="text-gray-600 text-lg">My academic journey</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- BE -->
+                <div class="relative pl-8 md:pl-0">
+                    <div
+                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
+                    </div>
+
+                    <div class="md:flex justify-between items-center group">
+                        <div class="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
+                            <span
+                                class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-2">2021
+                                - 2025</span>
+                            <h4 class="text-xl font-bold text-gray-900">JCT College of Engineering and Technologies</h4>
+                            <p class="text-gray-500">BE Computer Science and Engineering</p>
+                        </div>
+
+                        <div
+                            class="absolute left-0 md:left-1/2 w-8 h-8 bg-indigo-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 flex items-center justify-center z-10">
+                            <i class="fas fa-graduation-cap text-white text-xs"></i>
+                        </div>
+
+                        <div class="md:w-5/12 pl-8 md:pl-0">
+                            <div
+                                class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+                                <p class="text-gray-600 mb-4">Completed Bachelor of Engineering in Computer
+                                    Science and Engineering. Gained comprehensive knowledge in software development,
+                                    algorithms, and modern technologies.</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                                        Specializing in Full Stack Development
+                                    </li>
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                                        System Design & Algorithms
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12th Grade -->
+                <div class="relative pl-8 md:pl-0">
+                    <div
+                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
+                    </div>
+
+                    <div class="md:flex justify-between items-center flex-row-reverse group">
+                        <div class="md:w-5/12 mb-4 md:mb-0 text-center md:text-left">
+                            <span
+                                class="inline-block py-1 px-3 rounded-full bg-purple-50 text-purple-600 text-sm font-semibold mb-2">Completed
+                                2021</span>
+                            <h4 class="text-xl font-bold text-gray-900">CEOA Matriculation Higher Secondary School</h4>
+                            <p class="text-gray-500">12th Grade - Computer Science</p>
+                        </div>
+
+                        <div
+                            class="absolute left-0 md:left-1/2 w-8 h-8 bg-purple-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 flex items-center justify-center z-10">
+                            <i class="fas fa-school text-white text-xs"></i>
+                        </div>
+
+                        <div class="md:w-5/12 pl-8 md:pl-0">
+                            <div
+                                class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+                                <p class="text-gray-600 mb-4">Completed Higher Secondary Education with Computer Science
+                                    as major subject. Developed foundation in programming and computer fundamentals.</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                        Programming Fundamentals
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10th Grade -->
+                <div class="relative pl-8 md:pl-0">
+                    <div
+                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
+                    </div>
+
+                    <div class="md:flex justify-between items-center group">
+                        <div class="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
+                            <span
+                                class="inline-block py-1 px-3 rounded-full bg-pink-50 text-pink-600 text-sm font-semibold mb-2">2019</span>
+                            <h4 class="text-xl font-bold text-gray-900">CEOA Matriculation Higher Secondary School</h4>
+                            <p class="text-gray-500">10th Grade</p>
+                        </div>
+
+                        <div
+                            class="absolute left-0 md:left-1/2 w-8 h-8 bg-pink-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 flex items-center justify-center z-10">
+                            <i class="fas fa-book text-white text-xs"></i>
+                        </div>
+
+                        <div class="md:w-5/12 pl-8 md:pl-0">
+                            <div
+                                class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
+                                <p class="text-gray-600 mb-4">Completed Matriculation with strong foundation in science
+                                    and mathematics. Developed analytical thinking and problem-solving skills.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-gray-50" id="contact">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <p class="text-gray-600 text-lg">Let's work together on your next project</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+                <!-- Contact Info -->
+                <div class="md:w-1/3 space-y-6">
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Email</h4>
+                            <p class="text-gray-800 font-semibold">thirumoorthi924@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div
+                            class="w-12 h-12 bg-purple-50 rounded-full flex items-center justify-center text-purple-600">
+                            <i class="fas fa-phone text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Phone</h4>
+                            <p class="text-gray-800 font-semibold">+91 9345638126</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col sm:flex-row items-center text-center sm:text-left gap-5 hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-pink-50 rounded-full flex items-center justify-center text-pink-600">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1">Location</h4>
+                            <p class="text-gray-800 font-semibold">Chennai, TamilNadu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:w-2/3 bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
+                    <form class="space-y-6" id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="text-sm font-medium text-gray-700">Your Name</label>
+                                <input type="text" id="name" name="name"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all bg-gray-50 focus:bg-white"
+                                    placeholder="John Doe" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="email" class="text-sm font-medium text-gray-700">Your Email</label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all bg-gray-50 focus:bg-white"
+                                    placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="subject" class="text-sm font-medium text-gray-700">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all bg-gray-50 focus:bg-white"
+                                placeholder="Project Inquiry" required>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all bg-gray-50 focus:bg-white"
+                                placeholder="Tell me about your project..." required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 text-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <h3
+                        class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-2">
+                        Thiru.dev</h3>
+                    <p class="text-gray-400 text-sm">Crafting digital experiences with passion and precision.</p>
+                </div>
+
+                <div class="flex gap-6">
+                    <a href="https://github.com/Thiru1429" target="_blank"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-indigo-600 hover:text-white transition-all transform hover:-translate-y-1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/thirumoorthi14/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_itzz_thiru_/" target="_blank"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-pink-600 hover:text-white transition-all transform hover:-translate-y-1">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:thirumoorthi924@gmail.com"
+                        class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-500 hover:text-white transition-all transform hover:-translate-y-1">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <div class="text-gray-500 text-sm">
+                    &copy; 2025 Thirumoorthi S. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-all duration-300 transform translate-y-20 opacity-0 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+            } else {
+                backToTopBtn.classList.add('translate-y-20', 'opacity-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
