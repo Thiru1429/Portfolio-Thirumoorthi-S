@@ -4,40 +4,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navigation functionality
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const navMenu = document.getElementById('mobile-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+    const toggleIcon = document.getElementById('nav-toggle-icon');
     
     // Mobile menu toggle
-    navToggle.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        
-        // Animate hamburger menu
-        const bars = navToggle.querySelectorAll('.bar');
-        if (navMenu.classList.contains('active')) {
-            bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-            bars[1].style.opacity = '0';
-            bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-        } else {
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
-        }
-    });
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('hidden');
+            
+            if (toggleIcon) {
+                if (navMenu.classList.contains('hidden')) {
+                    toggleIcon.className = 'fas fa-bars text-2xl';
+                } else {
+                    toggleIcon.className = 'fas fa-times text-2xl';
+                }
+            }
+        });
+    }
     
     // Close mobile menu when clicking on links
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            const bars = navToggle.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
+    if (navMenu) {
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.add('hidden');
+                if (toggleIcon) {
+                    toggleIcon.className = 'fas fa-bars text-2xl';
+                }
+            });
         });
-    });
+    }
     
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
@@ -77,9 +77,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const navLink = document.querySelector(`.nav-link[href="#${id}"]`);
             
             if (scrollPos >= top && scrollPos <= bottom) {
-                navLinks.forEach(link => link.classList.remove('active'));
-                if (navLink) {
-                    navLink.classList.add('active');
+                navLinks.forEach(link => {
+                    if (!link.classList.contains('bg-indigo-600')) {
+                        link.classList.remove('text-indigo-600');
+                        link.classList.add('text-gray-600');
+                    }
+                });
+                if (navLink && !navLink.classList.contains('bg-indigo-600')) {
+                    navLink.classList.remove('text-gray-600');
+                    navLink.classList.add('text-indigo-600');
                 }
             }
         });
@@ -351,7 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
-    createBackToTopButton();
+    // createBackToTopButton();
     
     // Social links tracking
     const socialLinks = document.querySelectorAll('.social-link');
@@ -370,12 +376,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Keyboard navigation
     document.addEventListener('keydown', function(e) {
         // ESC key closes mobile menu
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            const bars = navToggle.querySelectorAll('.bar');
-            bars[0].style.transform = 'none';
-            bars[1].style.opacity = '1';
-            bars[2].style.transform = 'none';
+        if (e.key === 'Escape' && navMenu && !navMenu.classList.contains('hidden')) {
+            navMenu.classList.add('hidden');
+            if (toggleIcon) {
+                toggleIcon.className = 'fas fa-bars text-2xl';
+            }
         }
         
         // Ctrl/Cmd + K for quick navigation (future feature)

@@ -13,7 +13,15 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -30,22 +38,22 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
+                    <a href="#home" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
                     <a href="#projects"
-                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Projects</a>
+                        class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition-colors">Projects</a>
                     <a href="#skills"
-                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Skills</a>
+                        class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition-colors">Skills</a>
                     <a href="#education"
-                        class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Education</a>
+                        class="nav-link text-gray-600 hover:text-indigo-600 font-medium transition-colors">Education</a>
                     <a href="#contact"
-                        class="px-5 py-2.5 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Let's
+                        class="nav-link px-5 py-2.5 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Let's
                         Talk</a>
                 </div>
 
                 <div class="md:hidden">
                     <button class="text-gray-700 hover:text-indigo-600 focus:outline-none" id="nav-toggle">
-                        <i class="fas fa-bars text-2xl"></i>
+                        <i class="fas fa-bars text-2xl" id="nav-toggle-icon"></i>
                     </button>
                 </div>
             </div>
@@ -53,12 +61,12 @@
             <!-- Mobile Menu -->
             <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu">
                 <div class="flex flex-col space-y-4">
-                    <a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium">About</a>
-                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 font-medium">Projects</a>
-                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 font-medium">Skills</a>
-                    <a href="#education" class="text-gray-600 hover:text-indigo-600 font-medium">Education</a>
-                    <a href="#contact" class="text-indigo-600 font-medium">Contact Me</a>
+                    <a href="#home" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">About</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Skills</a>
+                    <a href="#education" class="nav-link text-gray-600 hover:text-indigo-600 font-medium">Education</a>
+                    <a href="#contact" class="nav-link text-indigo-600 font-medium">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -69,8 +77,8 @@
     <section class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50"
         id="home">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-                <div class="lg:w-1/2 space-y-8 animate-fade-in-up text-center lg:text-left">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+                <div class="space-y-8 animate-fade-in-up text-center lg:text-left order-2 lg:order-1">
                     <div class="space-y-4">
                         <span
                             class="inline-block py-1 px-3 rounded-full bg-indigo-100 text-indigo-700 font-medium text-sm tracking-wide">👋
@@ -78,13 +86,13 @@
                         <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
                             Hi, I'm <br>
                             <span
-                                class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Thirumoorthi
+                                class="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent hero-name">Thirumoorthi
                                 S</span>
                         </h1>
                         <p class="text-xl lg:text-2xl text-gray-600 font-medium">MERN Full Stack Developer</p>
                     </div>
 
-                    <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                         I build exceptional digital experiences that are fast, accessible, and visually appealing.
                         Passionate about transforming ideas into robust solutions using modern technologies.
                     </p>
@@ -102,21 +110,21 @@
 
                     <div class="flex justify-center lg:justify-start gap-6 pt-6">
                         <a href="https://github.com/Thiru1429" target="_blank"
-                            class="text-gray-400 hover:text-gray-900 transition-colors text-2xl"><i
+                            class="social-link text-gray-400 hover:text-gray-900 transition-colors text-2xl"><i
                                 class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/thirumoorthi14/" target="_blank"
-                            class="text-gray-400 hover:text-blue-600 transition-colors text-2xl"><i
+                            class="social-link text-gray-400 hover:text-blue-600 transition-colors text-2xl"><i
                                 class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl"><i
+                        <a href="#" class="social-link text-gray-400 hover:text-blue-400 transition-colors text-2xl"><i
                                 class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/_itzz_thiru_/" target="_blank"
-                            class="text-gray-400 hover:text-pink-600 transition-colors text-2xl"><i
+                            class="social-link text-gray-400 hover:text-pink-600 transition-colors text-2xl"><i
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <div class="lg:w-1/2 flex justify-center lg:justify-end">
-                    <div class="relative w-72 h-72 md:w-96 md:h-96">
+                <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+                    <div class="relative w-72 h-72 md:w-96 md:h-96 hero-image">
                         <div
                             class="absolute inset-0 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-full blur-2xl opacity-20 animate-pulse">
                         </div>
@@ -135,8 +143,8 @@
     <!-- About Section -->
     <section class="py-20 bg-white" id="about">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2 relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-16">
+                <div class="relative">
                     <div class="absolute -top-4 -left-4 w-24 h-24 bg-indigo-100 rounded-full opacity-50 blur-xl"></div>
                     <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-purple-100 rounded-full opacity-50 blur-xl">
                     </div>
@@ -144,7 +152,7 @@
                         class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto transform hover:scale-[1.02] transition-transform duration-500 z-10">
                 </div>
 
-                <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <div class="space-y-6 text-center md:text-left">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
                         Passionate about creating <br>
                         <span class="text-indigo-600">Digital Solutions</span>
@@ -162,15 +170,15 @@
                     </p>
 
                     <div class="grid grid-cols-3 gap-6 pt-6">
-                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors">
+                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-indigo-50 transition-colors stat-item">
                             <span class="block text-3xl font-bold text-indigo-600 mb-1">6+</span>
                             <span class="text-sm text-gray-600 font-medium">Months Exp</span>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-purple-50 transition-colors">
+                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-purple-50 transition-colors stat-item">
                             <span class="block text-3xl font-bold text-purple-600 mb-1">10+</span>
                             <span class="text-sm text-gray-600 font-medium">Projects</span>
                         </div>
-                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-pink-50 transition-colors">
+                        <div class="text-center p-4 bg-gray-50 rounded-xl hover:bg-pink-50 transition-colors stat-item">
                             <span class="block text-3xl font-bold text-pink-600 mb-1">24/7</span>
                             <span class="text-sm text-gray-600 font-medium">Support</span>
                         </div>
@@ -463,13 +471,13 @@
 
             <div class="max-w-4xl mx-auto space-y-8">
                 <!-- BE -->
-                <div class="relative pl-8 md:pl-0">
+                <div class="relative pl-10 md:pl-0 timeline-item">
                     <div
-                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
+                        class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
                     </div>
 
                     <div class="md:flex justify-between items-center group">
-                        <div class="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
+                        <div class="md:w-5/12 mb-4 md:mb-0 text-left md:text-right">
                             <span
                                 class="inline-block py-1 px-3 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-2">2021
                                 - 2025</span>
@@ -478,17 +486,21 @@
                         </div>
 
                         <div
-                            class="absolute left-0 md:left-1/2 w-8 h-8 bg-indigo-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 flex items-center justify-center z-10">
+                            class="absolute left-4 md:left-1/2 w-8 h-8 bg-indigo-600 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 flex items-center justify-center z-10">
                             <i class="fas fa-graduation-cap text-white text-xs"></i>
                         </div>
 
-                        <div class="md:w-5/12 pl-8 md:pl-0">
+                        <div class="w-full md:w-5/12">
                             <div
                                 class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
                                 <p class="text-gray-600 mb-4">Completed Bachelor of Engineering in Computer
                                     Science and Engineering. Gained comprehensive knowledge in software development,
                                     algorithms, and modern technologies.</p>
                                 <ul class="space-y-2">
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
+                                        CGPA: 7.6/10
+                                    </li>
                                     <li class="flex items-start text-gray-600 text-sm">
                                         <i class="fas fa-check-circle text-indigo-500 mt-1 mr-2"></i>
                                         Specializing in Full Stack Development
@@ -504,13 +516,13 @@
                 </div>
 
                 <!-- 12th Grade -->
-                <div class="relative pl-8 md:pl-0">
+                <div class="relative pl-10 md:pl-0 timeline-item">
                     <div
-                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
+                        class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
                     </div>
 
                     <div class="md:flex justify-between items-center flex-row-reverse group">
-                        <div class="md:w-5/12 mb-4 md:mb-0 text-center md:text-left">
+                        <div class="md:w-5/12 mb-4 md:mb-0 text-left">
                             <span
                                 class="inline-block py-1 px-3 rounded-full bg-purple-50 text-purple-600 text-sm font-semibold mb-2">Completed
                                 2021</span>
@@ -519,16 +531,20 @@
                         </div>
 
                         <div
-                            class="absolute left-0 md:left-1/2 w-8 h-8 bg-purple-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 flex items-center justify-center z-10">
+                            class="absolute left-4 md:left-1/2 w-8 h-8 bg-purple-600 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 flex items-center justify-center z-10">
                             <i class="fas fa-school text-white text-xs"></i>
                         </div>
 
-                        <div class="md:w-5/12 pl-8 md:pl-0">
+                        <div class="w-full md:w-5/12">
                             <div
                                 class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
                                 <p class="text-gray-600 mb-4">Completed Higher Secondary Education with Computer Science
                                     as major subject. Developed foundation in programming and computer fundamentals.</p>
                                 <ul class="space-y-2">
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
+                                        Percentage: 82%
+                                    </li>
                                     <li class="flex items-start text-gray-600 text-sm">
                                         <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
                                         Programming Fundamentals
@@ -540,13 +556,13 @@
                 </div>
 
                 <!-- 10th Grade -->
-                <div class="relative pl-8 md:pl-0">
+                <div class="relative pl-10 md:pl-0 timeline-item">
                     <div
-                        class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
+                        class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-indigo-100 transform -translate-x-1/2">
                     </div>
 
                     <div class="md:flex justify-between items-center group">
-                        <div class="md:w-5/12 mb-4 md:mb-0 text-center md:text-right">
+                        <div class="md:w-5/12 mb-4 md:mb-0 text-left md:text-right">
                             <span
                                 class="inline-block py-1 px-3 rounded-full bg-pink-50 text-pink-600 text-sm font-semibold mb-2">2019</span>
                             <h4 class="text-xl font-bold text-gray-900">CEOA Matriculation Higher Secondary School</h4>
@@ -554,15 +570,25 @@
                         </div>
 
                         <div
-                            class="absolute left-0 md:left-1/2 w-8 h-8 bg-pink-600 rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 flex items-center justify-center z-10">
+                            class="absolute left-4 md:left-1/2 w-8 h-8 bg-pink-600 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 flex items-center justify-center z-10">
                             <i class="fas fa-book text-white text-xs"></i>
                         </div>
 
-                        <div class="md:w-5/12 pl-8 md:pl-0">
+                        <div class="w-full md:w-5/12">
                             <div
                                 class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow">
                                 <p class="text-gray-600 mb-4">Completed Matriculation with strong foundation in science
                                     and mathematics. Developed analytical thinking and problem-solving skills.</p>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                        Percentage: 70%
+                                    </li>
+                                    <li class="flex items-start text-gray-600 text-sm">
+                                        <i class="fas fa-check-circle text-pink-500 mt-1 mr-2"></i>
+                                        Foundation in Science & Math
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -579,9 +605,9 @@
                 <p class="text-gray-600 text-lg">Let's work together on your next project</p>
             </div>
 
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
                 <!-- Contact Info -->
-                <div class="md:w-1/3 space-y-6">
+                <div class="md:col-span-1 space-y-6">
                     <div
                         class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 hover:shadow-md transition-shadow">
                         <div
@@ -619,7 +645,7 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div class="md:w-2/3 bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
+                <div class="md:col-span-2 bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
                     <form class="space-y-6" id="contactForm">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
